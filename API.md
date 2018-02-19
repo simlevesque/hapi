@@ -172,7 +172,6 @@
     - [`h.authenticated(data)`](#h.authenticated())
     - [`h.entity(options)`](#h.entity())
     - [`h.redirect(uri)`](#h.redirect())
-    - [`h.response([value])`](#h.response())
     - [`h.state(name, value, [options])`](#h.state())
     - [`h.unauthenticated(error, [data])`](#h.unauthenticated())
     - [`h.unstate(name, [options])`](#h.unstate())
@@ -595,7 +594,7 @@ const scheme = function (server, options) {
                 throw Boom.unauthorized(null, 'Custom');
             }
 
-            return h.authenticated{ credentials: { user: 'john' } });
+            return h.authenticated({ credentials: { user: 'john' } });
         }
     };
 };
